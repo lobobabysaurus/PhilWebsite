@@ -82,7 +82,6 @@ var TextBox = React.createClass({
             type: 'POST',
             data: text,
             success: function(data) {
-                console.log(data);
                 this.setState({data: data});
             }.bind(this),
             error: function (xhr, status, err) {
