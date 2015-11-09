@@ -1,0 +1,26 @@
+{
+  "name": "PhilWebsite",
+  "version": "0.0.0",
+  "description": "Phil Simmons Personal Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://lobobabysaurus@github.com/lobobabysaurus/PhilWebsite.git"
+  },
+  "keywords": [
+    "BackBone",
+    "React"
+  ],
+  "author": "Phil Simmons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lobobabysaurus/PhilWebsite/issues"
+  },
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "jquery": "^2.1.4"
+  }
+}
