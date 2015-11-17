@@ -1,3 +1,3 @@
-sudo cp ../bundle.js /var/www/html
-sudo cp -r ../style /var/www/html
-sudo cp ../index.html /var/www/html
+sudo cp build/index.js /var/www/html
+sudo cp build/philStyle.css /var/www/html
+sudo cp static/index.html /var/www/html
