@@ -1,3 +1,3 @@
-sudo cp build/index.js /var/www/html
-sudo cp build/philStyle.css /var/www/html
-sudo cp static/index.html /var/www/html
+node_modules/.bin/coffee-gulp
+sudo cp -r build/* /var/www/html
+sudo service apache2 reload
