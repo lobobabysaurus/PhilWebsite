@@ -1,0 +1,39 @@
+{
+  "name": "PhilWebsiteServer",
+  "version": "0.0.0",
+  "description": "Node/Mongo/Express server for Phil Simmons personal site",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "~1.0.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.4",
+    "promise": "~7.0.4"
+  },
+  "devDependencies": {
+    "coffee-gulp": "0.0.2",
+    "gulp": "^3.9.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-coffeelint": "^0.5.0",
+    "gulp-util": "^3.0.7",
+    "run-sequence": "^1.1.4"
+  },
+  "scripts": {
+    "start": "node build/server.js",
+    "gulp": "./node_modules/.bin/coffee-gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://lobobabysaurus@github.com/lobobabysaurus/PhilWebsiteServer.git"
+  },
+  "keywords": [
+    "Node",
+    "Mongo",
+    "Express"
+  ],
+  "author": "Phil Simmons",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/lobobabysaurus/PhilWebsiteServer/issues"
+  }
+}

@@ -4,6 +4,7 @@
   "description": "Phil Simmons Personal Site",
   "main": "index.js",
   "scripts": {
+    "gulp": "node_modules/.bin/coffee-gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
