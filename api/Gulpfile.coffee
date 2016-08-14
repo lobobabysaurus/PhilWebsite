@@ -1,7 +1,7 @@
-coffee = require 'gulp-coffee'
-coffeelint = require 'gulp-coffeelint'
-gulp = require 'gulp'
-gutil = require 'gulp-util'
+coffee      = require 'gulp-coffee'
+coffeelint  = require 'gulp-coffeelint'
+gulp        = require 'gulp'
+gutil       = require 'gulp-util'
 runSequence = require 'run-sequence'
 
 paths =
@@ -14,11 +14,11 @@ gulp.task 'build', ->
   return runSequence 'lint-coffee', 'coffee'
 
 gulp.task 'coffee', ->
-  return gulp.src(paths.src)
-    .pipe(coffee(bare: true).on('error', gutil.log))
-    .pipe(gulp.dest(paths.build))
+  return gulp.src paths.src
+    .pipe coffee(bare: true).on('error', gutil.log)
+    .pipe gulp.dest(paths.build)
 
 gulp.task 'lint-coffee', ->
-  return gulp.src(paths.src)
-    .pipe(coffeelint())
-    .pipe(coffeelint.reporter('default'))
+  return gulp.src paths.src
+    .pipe coffeelint()
+    .pipe coffeelint.reporter('default')

@@ -1,5 +1,5 @@
-Info = require('./models/Info')
-Media = require('./models/Media')
+Info  = require './models/Info'
+Media = require './models/Media'
 
-info = new Info(name: "test")
-media = new Media(link: "test2")
+info  = new Info name: "test"
+media = new Media link: "test2"

@@ -1,14 +1,12 @@
 express = require 'express'
-router = express.Router()
+router  = express.Router()
 
 Info = require '../models/Info'
 
-# define the home page route
+
 router.get '/', (req, res) ->
-  info = new Info({name :"test"})
-  info.save (err, info) ->
-    if err
-      return console.error(err)
-    res.send(info)
+  info = new Info name: "test"
+  info.save (err, model) ->
+    if err then console.error err else res.send model
 
 module.exports = router

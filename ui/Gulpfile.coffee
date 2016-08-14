@@ -29,39 +29,39 @@ gulp.task 'build-less', ->
   return runSequence 'lint-less', 'less', 'minify-css'
 
 gulp.task 'clean', ->
-  return gulp.src(paths.build, read: false)
-    .pipe(clean())
+  return gulp.src paths.build, read: false
+    .pipe clean()
 
 gulp.task 'coffee', ->
-  return gulp.src(paths.coffee)
-      .pipe(coffeeify())
-      .pipe(gulp.dest(paths.build))
+  return gulp.src paths.coffee
+      .pipe coffeeify()
+      .pipe gulp.dest(paths.build)
 
 gulp.task 'less', ->
-  return gulp.src(paths.less)
-    .pipe(less())
-    .pipe(gulp.dest(paths.build))
+  return gulp.src paths.less
+    .pipe less()
+    .pipe gulp.dest paths.build
 
 gulp.task 'lint-coffee', ->
-  return gulp.src(paths.coffee)
-    .pipe(coffeelint())
-    .pipe(coffeelint.reporter('default'))
+  return gulp.src paths.coffee
+    .pipe coffeelint()
+    .pipe coffeelint.reporter('default')
 
 gulp.task 'lint-less', ->
-  return gulp.src(paths.less)
-    .pipe(recess())
-    .pipe(recess.reporter())
+  return gulp.src paths.less
+    .pipe recess()
+    .pipe recess.reporter()
 
 gulp.task 'minify-css', ->
-  return gulp.src(paths.css)
-    .pipe(uglifycss())
-    .pipe(gulp.dest(paths.build))
+  return gulp.src paths.css
+    .pipe uglifycss()
+    .pipe gulp.dest paths.build
 
 gulp.task 'minify-js', ->
-  return gulp.src(paths.js)
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.build))
+  return gulp.src paths.js
+    .pipe uglify()
+    .pipe gulp.dest paths.build
 
 gulp.task 'static', ->
-  return gulp.src(paths.static)
-    .pipe(gulp.dest(paths.build))
+  return gulp.src paths.static
+    .pipe gulp.dest paths.build

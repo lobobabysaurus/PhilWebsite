@@ -1,2 +1,2 @@
-# PhilWebsite
-Source Code for my Personal Website
+# PhilWebsite - UI
+UI for my Personal Website

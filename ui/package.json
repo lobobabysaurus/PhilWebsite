@@ -21,8 +21,7 @@
     "url": "https://github.com/lobobabysaurus/PhilWebsite/issues"
   },
   "dependencies": {
-    "backbone": "^1.2.3",
-    "jquery": "^2.1.4"
+    "backbone": "^1.2.3"
   },
   "devDependencies": {
     "coffee-gulp": "0.0.2",

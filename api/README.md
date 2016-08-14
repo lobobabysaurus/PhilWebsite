@@ -1,2 +1,2 @@
-# PhilWebsiteServer
-Node/Mongo/Express server to host the api for my personal site
+# PhilWebsite API
+Node/Mongo/Express REST server for my personal site
