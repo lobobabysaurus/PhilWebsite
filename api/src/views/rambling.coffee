@@ -1,12 +1,12 @@
 express = require 'express'
 router  = express.Router()
 
-Media = require '../models/Media'
+Rambling = require '../models/rambling'
 
 
 router.get '/', (req, res) ->
-  media = new Media link: "test"
-  media.save (err, model) ->
+  rambling = new Rambling name: "test"
+  rambling.save (err, model) ->
     if err then console.error err else res.send model
 
 module.exports = router

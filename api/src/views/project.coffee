@@ -1,12 +1,12 @@
 express = require 'express'
 router  = express.Router()
 
-Info = require '../models/Info'
+Project = require '../models/project'
 
 
 router.get '/', (req, res) ->
-  info = new Info name: "test"
-  info.save (err, model) ->
+  project = new Project name: "test"
+  project.save (err, model) ->
     if err then console.error err else res.send model
 
 module.exports = router
