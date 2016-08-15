@@ -1,4 +1,5 @@
 bodyParser = require 'body-parser'
+config     = require 'config'
 express    = require 'express'
 mongoose   = require 'mongoose'
 mongoose.Promise = Promise
@@ -9,21 +10,25 @@ ProjectView  = require './views/project'
 RamblingView = require './views/rambling'
 
 
-url = "mongodb://localhost:27017/PersonalSiteDB"
-mongoose.connect url
+module.exports = new Promise (resolve) ->
+  db = mongoose.connect config.get('db')
+  db.connection
+    .on 'error', -> console.error.bind(console, 'connection error:')
+    .on 'open', ->
+      app = express()
 
-mongoose.connection
-  .on 'error', console.error.bind(console, 'connection error:')
-  .on 'open', (callback) ->
-    app = express()
-    app.use bodyParser.urlencoded(extended: true)
-    app.use bodyParser.json()
+      app.use bodyParser.urlencoded(extended: true)
+      app.use bodyParser.json()
 
-    app.use '/info', InfoView
-    app.use '/media', MediaView
-    app.use '/project', ProjectView
-    app.use '/rambling', RamblingView
+      app.use '/info', InfoView
+      app.use '/media', MediaView
+      app.use '/project', ProjectView
+      app.use '/rambling', RamblingView
 
-    port = 8080
-    app.listen port, ->
-      console.log "Backend Server Started"
+      port = config.get('port')
+      running = app.listen port, ->
+        console.log "Server Started on Port #{port}"
+
+      resolve
+        app: running
+        db: db
