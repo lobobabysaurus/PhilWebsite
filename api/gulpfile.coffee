@@ -17,7 +17,9 @@ gulp.task 'build', -> runSequence 'lint-coffee', 'coffee'
 
 gulp.task 'coffee', ->
   gulp.src paths.src
-    .pipe coffee(bare: true).on('error', gutil.log)
+    .pipe coffee
+      bare: true
+    .on('error', gutil.log)
     .pipe gulp.dest(paths.build)
 
 gulp.task 'lint-coffee', ->

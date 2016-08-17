@@ -10,6 +10,7 @@
     "mongoose": "^4.5.8"
   },
   "devDependencies": {
+    "app-module-path": "^1.1.0",
     "chai": "^3.5.0",
     "coffee-gulp": "0.0.2",
     "gulp": "^3.9.1",

@@ -2,7 +2,7 @@ require '../spec'
 
 request = require 'supertest'
 
-Rambling = require '../../src/models/rambling'
+Rambling = require 'models/rambling'
 
 
 describe 'Rambling View', ->

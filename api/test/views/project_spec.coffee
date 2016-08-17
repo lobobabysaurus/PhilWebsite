@@ -2,7 +2,7 @@ require '../spec'
 
 request = require 'supertest'
 
-Project = require '../../src/models/project'
+Project = require 'models/project'
 
 
 describe 'Project View', ->

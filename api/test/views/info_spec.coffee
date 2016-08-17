@@ -2,7 +2,7 @@ require '../spec'
 
 request = require 'supertest'
 
-Info = require '../../src/models/info'
+Info = require 'models/info'
 
 
 describe 'Info View', ->

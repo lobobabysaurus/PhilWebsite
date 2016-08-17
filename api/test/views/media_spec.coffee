@@ -2,7 +2,7 @@ require '../spec'
 
 request = require 'supertest'
 
-Media = require '../../src/models/media'
+Media = require 'models/media'
 
 
 describe 'Media View', ->
