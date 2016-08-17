@@ -2,6 +2,7 @@ process.env.NODE_ENV = 'test'
 
 config        = require 'config'
 mochaMongoose = require 'mocha-mongoose'
+require('chai').should()
 
 server = require '../src/server'
 

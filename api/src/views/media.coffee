@@ -1,12 +1,20 @@
 express = require 'express'
-router  = express.Router()
 
 Media = require '../models/media'
 
 
-router.get '/', (req, res) ->
-  media = new Media link: "test"
-  media.save (err, model) ->
-    if err then console.error err else res.send model
+module.exports = express.Router()
 
-module.exports = router
+  .get '/', (req, res) ->
+    Media.find (err, models) ->
+      if err
+        res.status(500).send(err)
+      else
+        res.json models
+
+  .post '/', (req, res) ->
+    new Media(req.body).save (err, model) ->
+      if err
+        res.status(500).send(err)
+      else
+        res.json model

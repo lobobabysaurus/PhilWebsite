@@ -1,12 +1,20 @@
 express = require 'express'
-router  = express.Router()
 
 Info = require '../models/info'
 
 
-router.get '/', (req, res) ->
-  info = new Info name: "test"
-  info.save (err, model) ->
-    if err then console.error err else res.send model
+module.exports = express.Router()
 
-module.exports = router
+  .get '/', (req, res) ->
+    Info.find (err, models) ->
+      if err
+        res.status(500).send(err)
+      else
+        res.json models
+
+  .post '/', (req, res) ->
+    new Info(req.body).save (err, model) ->
+      if err
+        res.status(500).send(err)
+      else
+        res.json model

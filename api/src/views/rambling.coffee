@@ -1,12 +1,20 @@
 express = require 'express'
-router  = express.Router()
 
 Rambling = require '../models/rambling'
 
 
-router.get '/', (req, res) ->
-  rambling = new Rambling name: "test"
-  rambling.save (err, model) ->
-    if err then console.error err else res.send model
+module.exports = express.Router()
 
-module.exports = router
+  .get '/', (req, res) ->
+    Rambling.find (err, models) ->
+      if err
+        res.status(500).send(err)
+      else
+        res.json models
+
+  .post '/', (req, res) ->
+    new Rambling(req.body).save (err, model) ->
+      if err
+        res.status(500).send(err)
+      else
+        res.json model
