@@ -32,6 +32,7 @@
     "gulp-less": "^3.1.0",
     "gulp-recess": "^1.2.0",
     "gulp-rimraf": "^0.2.0",
+    "gulp-serve": "^1.4.0",
     "gulp-uglify": "^2.0.0",
     "gulp-uglifycss": "^1.0.6",
     "run-sequence": "^1.2.2"
