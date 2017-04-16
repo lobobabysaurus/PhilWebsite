@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "deploy": "aws s3 cp --acl public-read public/ s3://www.phil-simmons.com --recursive",
     "generate": "hexo generate",
     "start": "hexo serve"
   },

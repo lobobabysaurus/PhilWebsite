@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Phil Simmons Blog
+title: Phil Simmons' Blog
 subtitle:
-description: A Blog about things interesting to Phil
+description: A blog about things I find interesting and challenging
 author: Phil Simmons
 language:
-timezone:
+timezone: America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
