@@ -1,4 +1,4 @@
-FROM node:4.3.2
+FROM node:6.10.2
 
 RUN npm install -g hexo-cli
 
