@@ -1,2 +1,2 @@
-# PhilWebsite
-Source Code for my Personal Website
+# Phil Website
+A blog written in Hexo about Phil Simmons's thoughts
